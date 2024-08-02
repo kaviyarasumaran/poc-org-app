@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+// models/Organization.js
+const mongoose = require("mongoose");
 
 const organizationSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -8,8 +9,11 @@ const organizationSchema = new mongoose.Schema({
     phone_number: { type: String },
     org_id: { type: String, unique: true },
     isConfirmed: { type: Boolean, default: false },
+    mfaEnabled: { type: Boolean, default: false },
+    otp: { type: String },
+    otpExpires: { type: Date },
 });
 
-const Organization = mongoose.model('Organization', organizationSchema);
+const Organization = mongoose.model("Organization", organizationSchema);
 
 module.exports = Organization;
