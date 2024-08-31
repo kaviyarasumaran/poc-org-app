@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Verification Method</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Choose Verification Method</h2>
+    <form id="verificationChoiceForm">
+      <div>
+        <input type="radio" id="mfa" name="verification" value="mfa">
+        <label for="mfa">Multi-Factor Authentication (MFA)</label>
+      </div>
+      <div>
+        <input type="radio" id="tfa" name="verification" value="tfa">
+        <label for="tfa">Two-Factor Authentication (TFA)</label>
+      </div>
+      <button type="submit">Proceed</button>
+    </form>
+    <p>Or <a href="login.html">Go back to Login</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>
